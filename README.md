@@ -6,5 +6,6 @@ Scripts I have written in Ruby, Bash, and other languages, created to perform sp
 - [Host-Header-Injector](Host-Header-Injector/)
 - [PCAP-EAP-Extractor](PCAP-EAP-Extractor/)
 - [Pure-FTPd-DoS](Pure-FTPd-DoS/)
+- [RUT-Generator](RUT-Generator/)
 - [Random-MAC-Creator](Random-MAC-Creator/)
 - [Ruby-CLI-Server](Ruby-CLI-Server/)
