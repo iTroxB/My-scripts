@@ -9,3 +9,5 @@ Scripts I have written in Ruby, Bash, and other languages, created to perform sp
 - [RUT-Generator](RUT-Generator/)
 - [Random-MAC-Creator](Random-MAC-Creator/)
 - [Ruby-CLI-Server](Ruby-CLI-Server/)
+- [Sec-Password](Sec-Password/)
+- [Secret-Scanner](Secret-Scanner/)
