@@ -13,14 +13,14 @@ Generador de listas de RUTs chilenos válidos en diferentes formatos.
 * Descargar el script al sistema
 
 ```shell
-mkdir -p ~/RubyTools/RUT-Generator/ && cd $_
+mkdir -p ~/iTools/RUT-Generator/ && cd $_
 curl -O https://raw.githubusercontent.com/iTroxB/My-scripts/refs/heads/main/RUT-Generator/rutGenerator.rb
 ```
 
 * Crear enlace simbólico al script
 
 ```shell
-sudo ln -s ~/RubyTools/RUT-Generator/rutGenerator.rb /usr/bin/rutGenerator
+sudo ln -s ~/iTools/RUT-Generator/rutGenerator.rb /usr/bin/rutGenerator
 ```
 
 * Para conocer las opciones y parámetros de la herramienta, ejecutarla con la opción `-h`
@@ -54,4 +54,5 @@ rutGenerator -n 5 -r 15-18 -f 3
 
 <div align="center">
   <img src="img/rut-2.png" width=750px>
+
 </div>
