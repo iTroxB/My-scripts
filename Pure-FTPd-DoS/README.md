@@ -13,7 +13,7 @@ Obtaining WPA-EAP identities, EAP certificates, HTTP passwords, Handshakes, DNS 
 * Download the scripts to your system
 
 ```shell
-mkdir -p ~/RubyTools/Pure-FTPd-DoS/ && cd $_
+mkdir -p ~/iTools/Pure-FTPd-DoS/ && cd $_
 curl -O https://raw.githubusercontent.com/iTroxB/My-scripts/refs/heads/main/Pure-FTPd-DoS/FTPd-DoS.go
 ```
 
@@ -35,4 +35,5 @@ go run FTPd-DoS.go
 
 <div align="center">
   <img src="img/ftp-1.png" width=750px>
+
 </div>
