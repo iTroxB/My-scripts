@@ -13,14 +13,14 @@ CLI tool written in Ruby that allows you to encrypt and decrypt texts using AES2
 * Download the script to your system
 
 ```shell
-mkdir -p ~/RubyTools/AESCipher/ && cd $_
+mkdir -p ~/iTools/AESCipher/ && cd $_
 curl -O https://raw.githubusercontent.com/iTroxB/My-scripts/refs/heads/main/AES-Cipher/aesCipher.rb
 ```
 
 * Create symbolic link to the script
 
 ```shell
-sudo ln -s ~/RubyTools/AESCipher/aesCipher.rb /usr/bin/aesCipher
+sudo ln -s ~/iTools/AESCipher/aesCipher.rb /usr/bin/aesCipher
 ```
 
 * To know the options and parameters of the tool run the help menu with the flag `-h`
@@ -290,4 +290,5 @@ ruby aesCipher.rb -D -M GCM -k "4a7e5d6c3f8a9b0e1d2c3b4a5968770a1b2c3d4e5f607182
 ➜ Key used (hex): 4a7e5d6c3f8a9b0e1d2c3b4a5968770a1b2c3d4e5f60718293a4b5c6d7e8f901
 ➜ IV/Nonce used (hex): a1b2c3d4e5f60718293a4b12
 ➜ Decrypted message: Mensaje autenticado
+
 ```
