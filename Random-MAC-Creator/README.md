@@ -14,14 +14,14 @@ Focused on creating real random addresses that are not detected by MAC anti-spoo
 * Download the script to your system
 
 ```shell
-mkdir -p ~/RubyTools/Random-MAC-Creator/ && cd $_
+mkdir -p ~/iTools/Random-MAC-Creator/ && cd $_
 curl -O https://raw.githubusercontent.com/iTroxB/My-scripts/refs/heads/main/Random-MAC-Creator/randomMACcreator.rb
 ```
 
 * Create symbolic link to the script
 
 ```shell
-sudo ln -s ~/RubyTools/Random-MAC-Creator/randomMACcreator.rb /usr/bin/randomMACcreator
+sudo ln -s ~/iTools/Random-MAC-Creator/randomMACcreator.rb /usr/bin/randomMACcreator
 ```
 
 ---
@@ -32,4 +32,5 @@ sudo ln -s ~/RubyTools/Random-MAC-Creator/randomMACcreator.rb /usr/bin/randomMAC
 
 <div align="center">
   <img src="img/random-1.png" width=750px>
+
 </div>
