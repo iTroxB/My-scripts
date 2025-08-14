@@ -13,7 +13,7 @@ Obtaining WPA-EAP identities, EAP certificates, HTTP passwords, Handshakes, DNS 
 * Download the scripts to your system
 
 ```shell
-mkdir -p ~/RubyTools/PCAP-EAP-Extractor/ && cd $_
+mkdir -p ~/iTools/PCAP-EAP-Extractor/ && cd $_
 curl -O https://raw.githubusercontent.com/iTroxB/My-scripts/refs/heads/main/PCAP-EAP-Extractor/pcapEAPextractor.rb
 curl -O https://raw.githubusercontent.com/iTroxB/My-scripts/refs/heads/main/PCAP-EAP-Extractor/requirements.sh
 ```
@@ -21,13 +21,13 @@ curl -O https://raw.githubusercontent.com/iTroxB/My-scripts/refs/heads/main/PCAP
 * Install requirements
 
 ```shell
-bash ~/RubyTools/PCAP-EAP-Extractor/requirements.sh
+bash ~/iTools/PCAP-EAP-Extractor/requirements.sh
 ```
 
 * Create symbolic link to the script
 
 ```shell
-sudo ln -s ~/RubyTools/PCAP-EAP-Extractor/pcapEAPextractor.rb /usr/bin/pcapEAPextractor
+sudo ln -s ~/iTools/PCAP-EAP-Extractor/pcapEAPextractor.rb /usr/bin/pcapEAPextractor
 ```
 
 * To know the options and parameters of the tool run the help menu with the flag `-h`
@@ -55,3 +55,4 @@ pcapEAPextractor -h
 <div align="center">
   <img src="img/pcap-2.png" width=750px>
 </div>
+
