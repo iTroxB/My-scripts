@@ -163,7 +163,6 @@ def show_help
     HELP
     write_output(help_text)
     exit
-    puts
 end
 
 if ARGV.empty? || ARGV.include?('-h')
