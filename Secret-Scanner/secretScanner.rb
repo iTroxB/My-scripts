@@ -2,7 +2,6 @@
 # Author: iTrox (Javier González)
 
 require 'find'
-require 'colorize'
 
 COLORS = {
     blue: "\e[34m",
@@ -164,6 +163,7 @@ def show_help
     HELP
     write_output(help_text)
     exit
+    puts
 end
 
 if ARGV.empty? || ARGV.include?('-h')
