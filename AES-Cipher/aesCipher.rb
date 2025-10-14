@@ -166,6 +166,26 @@ class AESCipher
     end
 end
 
+def safe_decode_plaintext(plaintext)
+    utf8_text = plaintext.dup.force_encoding('UTF-8')
+    if utf8_text.valid_encoding?
+        if utf8_text.match?(/\A[\p{Print}\s\r\n\t]*\z/)
+            return utf8_text
+        else
+            return "#{COLORS[:yellow]}(Binary data - hex): #{plaintext.unpack('H*').first}#{COLORS[:reset]}"
+        end
+    end
+    
+    ascii_text = plaintext.dup.force_encoding('ASCII-8BIT')
+    if ascii_text.match?(/\A[\x20-\x7E\r\n\t]*\z/)
+        return ascii_text.force_encoding('UTF-8')
+    else
+        return "#{COLORS[:yellow]}(Binary data - hex): #{plaintext.unpack('H*').first}#{COLORS[:reset]}"
+    end
+rescue => e
+    "#{COLORS[:yellow]}(Binary data - hex): #{plaintext.unpack('H*').first}#{COLORS[:reset]}"
+end
+
 def print_help
     puts <<~HELP
         #{COLORS[:green]}Use:#{COLORS[:reset]} aes-cipher [flags]
@@ -277,7 +297,10 @@ begin
         puts "\n#{COLORS[:green]}[✔︎] AES-256 decryption result-#{options[:mode]}:#{COLORS[:reset]}"
         puts "#{COLORS[:blue]}➜ Key used (hex):#{COLORS[:reset]} #{result[:key_used]}"
         puts "#{COLORS[:blue]}➜ IV/Nonce used (hex):#{COLORS[:reset]} #{result[:iv_used] || 'N/A'}"
-        puts "#{COLORS[:blue]}➜ Decrypted message:#{COLORS[:reset]} #{result[:plaintext]}"
+        
+        # Use safe decoding for the plaintext
+        decoded_plaintext = safe_decode_plaintext(result[:plaintext])
+        puts "#{COLORS[:blue]}➜ Decrypted message:#{COLORS[:reset]} #{decoded_plaintext}"
     end
 
 rescue => e
