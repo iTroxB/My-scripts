@@ -18,6 +18,7 @@ Complementary static scanner that detects sensitive strings in source code. Sinc
 ```shell
 mkdir -p ~/iTools/Secret-Scanner/ && cd $_
 curl -O https://raw.githubusercontent.com/iTroxB/My-scripts/refs/heads/main/Secret-Scanner/secretScanner.rb
+chmod +x secretScanner.rb
 ```
 
 * Create symbolic link to the script
@@ -58,4 +59,5 @@ secretScanner -d test/ -t 5 -o output.txt
 
 <div align="center">
   <img src="img/scanner-2.png" width=750px>
+
 </div>
