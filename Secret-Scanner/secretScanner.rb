@@ -426,6 +426,7 @@ def generate_detailed_report
 end
 
 def show_help
+    print_banner
     help_text = <<~HELP
     #{COLORS[:blue]}USAGE:#{COLORS[:reset]}
         ruby #{__FILE__} [options]
