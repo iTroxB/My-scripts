@@ -15,7 +15,8 @@ COLORS = {
   violet: "\e[35m",
   gray: "\e[90m",
   yellow: "\e[33m",
-  reset: "\e[0m"
+  reset: "\e[0m",
+  clear: "\e[K"
 }
 
 TARGET_PROCESS_NAME = "Diablo IV.exe"
@@ -186,7 +187,7 @@ loop do
     active_pid = Sys.get_active_pid
 
     if active_pid == target_pid
-      print("\r#{COLORS[:green]}[➤] En ejecución:#{COLORS[:reset]} ")
+      print("\r#{COLORS[:clear]}#{COLORS[:green]}[➤] En ejecución:#{COLORS[:reset]} ")
       
       $config[:keys].each do |key|
         if Sys.get_active_pid == target_pid
@@ -198,16 +199,15 @@ loop do
           break 
         end
       end
-      print("              ")
+      
     else
-      print("\r#{COLORS[:gray]}[!] En pausa: (Diablo IV se puso en segundo plano)           #{COLORS[:reset]}")
+      print("\r#{COLORS[:clear]}#{COLORS[:gray]}[!] En pausa: (Diablo IV en segundo plano)#{COLORS[:reset]}")
     end
 
   rescue WIN32OLERuntimeError
-    print("\r#{COLORS[:red]}[!] Entrada del sistema bloqueada...#{COLORS[:reset]}")
-    print("\r#{COLORS[:red]}[!] Revisar permisos contra el UAC#{COLORS[:reset]}")
+    print("\r#{COLORS[:clear]}#{COLORS[:red]}[!] Entrada del sistema bloqueada (UAC/Admin)#{COLORS[:reset]}")
   rescue => e
-    print("\r#{COLORS[:red]}[!] Error: #{e.class}#{COLORS[:reset]}")
+    print("\r#{COLORS[:clear]}#{COLORS[:red]}[!] Error: #{e.class}#{COLORS[:reset]}")
   end
 
   sleep($config[:interval] + rand(0.1..0.2))
