@@ -161,13 +161,13 @@ En la siguiente imagen se visualiza que todo el terreno entre las líneas verdes
   <img src="img/D4M-pathfinding.png" width=750px>
 </div>
 
-Al realizar un clic de movimiento sobre un terreno válido para la movilización, el juego indica la valides de esta acción por un remarcado de cursor en forma de círculo amarillo. Con esto se indica que la acción de movimiento fue correctamente interpretada, y que el personaje se movilizará al punto indicado
+Al realizar un clic de movimiento sobre un terreno válido para la movilización, el juego indica la validez de esta acción por un remarcado de cursor en forma de círculo amarillo. Con esto se indica que la acción de movimiento fue correctamente interpretada, y que el personaje se movilizará al punto indicado
 
 <div align="center">
   <img src="img/D4M-pathfinding2.png" width=750px>
 </div>
 
-Al realizar un clic de movimiento sobre un terreno no válido para movilizarse, el juego envía al personaje al punto válido más cercano, y no replica la valides de esta acción con un remarcado de cursor en forma de círculo amarillo, si no que no remarca ni destaca nada al realizar la acción de clic. Así, el personaje se movilizará al punto válido mas cercano sobre el eje coordenado hacia el cual se realizó la acción, colisionando contra la montaña y no avanzando sobre ella
+Al realizar un clic de movimiento sobre un terreno no válido para movilizarse, el juego envía al personaje al punto válido más cercano, y no replica la validez de esta acción con un remarcado de cursor en forma de círculo amarillo, si no que no remarca ni destaca nada al realizar la acción de clic. Así, el personaje se movilizará al punto válido mas cercano sobre el eje coordenado hacia el cual se realizó la acción, colisionando contra la montaña y no avanzando sobre ella
 
 <div align="center">
   <img src="img/D4M-pathfinding3.png" width=750px>
