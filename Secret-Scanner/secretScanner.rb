@@ -342,7 +342,7 @@ def scan_directory(directory, delay: DEFAULT_DELAY)
         Find.find(directory) do |path|
             next unless File.file?(path)
             
-            if File.extname(path).downcase =~ /\.(asp|aspx|bash|bat|cfg|cfm|cgi|cjs|conf|css|csv|cts|db|do|dsx|dtsx|env|go|htaccess|html|ini|java|js|json|jsp|jsx|log|mjs|mts|php|pl|ps1|py|rb|rpg|rs|sh|sql|svc|svg|ts|tsx|txt|vue|xml|yaml|yml)/i
+            if File.extname(path).downcase =~ /\.(asp|aspx|bash|bat|cfg|cfm|cgi|cjs|conf|css|csv|cts|db|do|dsx|dtsx|env|go|htaccess|html|ini|ir|java|js|json|jsp|jsx|log|metadata|mjs|mts|php|pl|ps1|py|rb|rpg|rs|sh|sql|svc|svg|ts|tsx|txt|vue|xml|yaml|yml)/i
                 $scan_report[:total_files_scanned] += 1
                 write_output("#{COLORS[:blue]}➜ Processing file #{$scan_report[:total_files_scanned]}: #{path}#{COLORS[:reset]}")
                 findings = scan_file(path, delay: delay)
@@ -426,7 +426,6 @@ def generate_detailed_report
 end
 
 def show_help
-    print_banner
     help_text = <<~HELP
     #{COLORS[:blue]}USAGE:#{COLORS[:reset]}
         ruby #{__FILE__} [options]
@@ -439,9 +438,9 @@ def show_help
         -h                Show this help menu
     
     #{COLORS[:blue]}EXAMPLES:#{COLORS[:reset]}
-        ruby #{__FILE__} -f app.js
-        ruby #{__FILE__} -d ./src -t 4 -o scan_results.txt
-        ruby #{__FILE__} -f config.yaml -o report.txt
+        ruby secretScanner -f app.js
+        ruby secretScanner -d ./src -t 4 -o scan_results.txt
+        ruby secretScanner -f config.yaml -o report.txt
     
     #{COLORS[:gray]}Note: Threads control affects delay between findings to avoid overwhelming the system#{COLORS[:reset]}
     HELP
