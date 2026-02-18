@@ -6,12 +6,14 @@ require 'uri'
 require 'net/http'
 
 COLORS = {
-    green: "\e[0;32m\e[1m",
-    red: "\e[0;31m\e[1m",
-    blue: "\e[0;34m\e[1m",
-    orange: "\e[0;33m\e[1m",
-    turquoise: "\e[0;36m\e[1m",
-    gray: "\e[0;37m\e[1m",
+    blue: "\e[34m",
+    calypso: "\e[96m",
+    green: "\e[32m",
+    red: "\e[31m",
+    orange: "\e[38;5;208m",
+    violet: "\e[35m",
+    gray: "\e[90m",
+    yellow: "\e[33m",
     reset: "\e[0m"
 }
 
@@ -83,6 +85,7 @@ def scan_url(url, domain, timeout, verbose)
     
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = (uri.scheme == 'https')
+    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
     http.read_timeout = timeout
     http.open_timeout = timeout
 
