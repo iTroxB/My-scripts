@@ -342,7 +342,7 @@ def scan_directory(directory, delay: DEFAULT_DELAY)
         Find.find(directory) do |path|
             next unless File.file?(path)
             
-            if File.extname(path).downcase =~ /\.(asp|aspx|bash|bat|cfg|cfm|cgi|cjs|conf|css|csv|cts|db|do|dsx|dtsx|env|go|htaccess|html|ini|ir|java|js|json|jsp|jsx|log|metadata|mjs|mts|php|pl|ps1|py|rb|rpg|rs|sh|sql|svc|svg|ts|tsx|txt|vue|xml|yaml|yml)/i
+            if File.extname(path).downcase =~ /\.(asp|aspx|bash|bat|cfg|cfm|cgi|cjs|conf|css|csv|cts|db|do|dsx|dtsx|env|go|htaccess|html|ini|ir|java|js|json|jsp|jsx|log|metadata|mjs|mts|php|pl|ps1|py|rb|rpg|rs|sh|snap|sql|svc|svg|ts|tsx|txt|vue|xml|yaml|yml)/i
                 $scan_report[:total_files_scanned] += 1
                 write_output("#{COLORS[:blue]}➜ Processing file #{$scan_report[:total_files_scanned]}: #{path}#{COLORS[:reset]}")
                 findings = scan_file(path, delay: delay)
